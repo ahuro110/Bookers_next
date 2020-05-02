@@ -1,0 +1,120 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets"; 
+ @import "bootstrap";   
+
+ *{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   text-decoration: none;
+ }
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+ }
+
+ header{
+  height:50px;
+  background-color: #222;
+  border-color: #090909;
+ }
+
+ 
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.navbar-left{
+  float:left;
+}
+
+header .navbar-left span {
+  font-size: 20px;
+  padding-top: 10px;
+  color:rgb(255, 255, 255);
+}
+
+.navbar-right{
+  float:right;
+  list-style: none;
+}
+
+header .navbar-right li{
+  display:inline-block;
+}
+
+header .navbar-right li a{
+  color:rgb(157, 157, 157);
+  padding:15px;
+  line-height:20px;
+  font-size:13px;
+}
+
+body {
+  margin-top: 51px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #fff;
+}
+
+.notice {
+  color: green;
+}
+
+#error_explanation {
+  color: red;
+}
+
+#error_explanation ul{
+  width:1074px;
+  margin:0 auto;
+  padding-left:40px;
+}
+
+
+p {
+  margin: 0 0 10px;
+}
+
+
+#notice {
+  color: green;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+a:visited {
+  color: #666;
+}
+
+.btn-succes{
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+footer p{
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+}
