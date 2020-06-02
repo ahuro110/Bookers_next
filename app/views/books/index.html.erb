@@ -12,7 +12,11 @@
     <% end %>
     <div class="row">
 
-    <%= render 'users/new' , user: @user , book:@book %>
+    <div class="col-xs-3">
+      <%= render 'users/new' , user: @user %>
+      <%= render 'users/edit'%>
+      <%= render 'books/form' ,book:@book%>
+    </div>
     <div class="col-xs-9">
       <h2>Books</h2>
 
