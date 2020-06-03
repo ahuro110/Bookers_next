@@ -1,16 +1,18 @@
 class BookCommentsController < ApplicationController
   before_action  :correct_user,   only: [:destroy]
   def create
-    @book_comment = current_user.book_comments.new(book_comment_params)
-    @book_comment.book_id = Book.find(params[:book_id]).id
+    @book = Book.find(params[:book_id])
+    @book_comment = @book.book_comments.new(book_comment_params)
+    @book_comment.user_id = current_user.id
+    @user_book = Book.find(params[:book_id])
+    @user_book_comments = @user_book.book_comments
     @book_comment.save
-    redirect_to book_path(params[:book_id])
-
   end
   def destroy
+    @user_book = Book.find(params[:book_id])
+    @user_book_comments = @user_book.book_comments
     @book_comment = BookComment.find(params[:id])
     @book_comment.destroy
-    redirect_to book_path(params[:book_id])
   end
   private
   def book_comment_params
