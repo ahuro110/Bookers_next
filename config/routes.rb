@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show,:index, :edit, :update] do
     resource :relationships,  only: [:create, :destroy]
   end
+  get "searches" => "searches#index"
   resources :books, only: [:create,:index,:show,:edit,:update,:destroy] do
     resources :book_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
